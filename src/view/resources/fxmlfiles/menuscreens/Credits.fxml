@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="creditsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.scenecontrol.menuscreens.Credits">
+   <children>
+      <ImageView fitHeight="1200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+         <image>
+            <Image url="@../../images/MenuBackground2.png" />
+         </image>
+         <effect>
+            <BoxBlur iterations="3" />
+         </effect>
+         <StackPane.margin>
+            <Insets top="-10.0" />
+         </StackPane.margin>
+      </ImageView>
+      <Label text="KINGDOM OF PAC" textFill="#fcff08" StackPane.alignment="TOP_CENTER">
+         <padding>
+            <Insets top="100.0" />
+         </padding>
+         <font>
+            <Font name="DejaVu Serif Bold" size="80.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" cancelButton="true" mnemonicParsing="false" onAction="#buttonControlHandler" text="Back" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </StackPane.margin>
+         <font>
+            <Font name="DejaVu Serif Bold" size="20.0" />
+         </font></Button>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="578.0" prefWidth="850.0" spacing="10.0" StackPane.alignment="BOTTOM_CENTER">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="93.0" prefWidth="582.0" text="created by&#10;Mana Carr and Anthony Dang" textAlignment="CENTER" textFill="#39e5f8">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="850.0" spacing="90.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="330.0" text="Images" textAlignment="CENTER" textFill="#fcff08">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="330.0" text="Sound Effects" textFill="#fcff08">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="311.0" prefWidth="850.0" spacing="90.0">
+               <children>
+                  <Label prefHeight="108.0" prefWidth="330.0" text="Menu Screen Background&#10;&#9;Zabin - https://opengameart.org/content/castle-tiles-for-rpgs&#10;Character Sprites&#10;&#9;http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/#&#10;" textFill="#fcff08">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="260.0" prefWidth="330.0" text="Game Music&#10;&#9;https://freesound.org/people/Sirkoto51/sounds/393818/&#10;Button Sound&#10;&#9;Bertrof - https://freesound.org/people/Bertrof/sounds/131660/&#10;Power Up Sound&#10;&#9;https://freesound.org/people/josepharaoh99/sounds/368651/&#10;Dying Sound&#10;&#9;https://freesound.org/people/jacksonacademyashmore/sounds/414209/&#10;&#10;&#9;" textFill="#fcff08">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="charSelectPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.scenecontrol.menuscreens.CharSelectMultiplayer">
+   <children>
+      <ImageView fitHeight="1200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+         <image>
+            <Image url="@../../images/MenuBackground2.png" />
+         </image>
+         <effect>
+            <BoxBlur iterations="3" />
+         </effect>
+         <StackPane.margin>
+            <Insets bottom="100.0" />
+         </StackPane.margin>
+      </ImageView>
+      <Label text="Challenge Mode Setup" textFill="#fcff08" StackPane.alignment="TOP_CENTER">
+         <StackPane.margin>
+            <Insets top="100.0" />
+         </StackPane.margin>
+         <font>
+            <Font name="DejaVu Serif Bold" size="60.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="408.0" spacing="10.0" StackPane.alignment="CENTER">
+         <StackPane.margin>
+            <Insets bottom="330.0" />
+         </StackPane.margin>
+         <children>
+            <Label alignment="TOP_LEFT" text="Number of Players:" textFill="#39e5f8">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="players2" mnemonicParsing="false" onAction="#buttonControlHandler" text="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="players3" mnemonicParsing="false" onAction="#buttonControlHandler" text="3">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox fx:id="hBox" alignment="TOP_CENTER" maxHeight="130.0" maxWidth="730.0" prefHeight="120.0" prefWidth="720.0" spacing="50.0" StackPane.alignment="CENTER">
+         <children>
+            <Button fx:id="heroBSelect" alignment="BOTTOM_CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonControlHandler" prefHeight="120.0" prefWidth="80.0">
+               <graphic>
+                  <ImageView fx:id="heroB" accessibleText="heroB" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/heroB/down1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="heroGSelect" alignment="BOTTOM_CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonControlHandler" prefHeight="120.0" prefWidth="80.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fx:id="heroG" accessibleText="heroG" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/heroG/down1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="mageSelect" alignment="BOTTOM_CENTER" disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonControlHandler" prefHeight="120.0" prefWidth="80.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fx:id="mage" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/mage/down1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="hikerSelect" alignment="BOTTOM_CENTER" disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonControlHandler" prefHeight="120.0" prefWidth="80.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fx:id="hiker" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/hiker/down1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="sprinterSelect" alignment="BOTTOM_CENTER" disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonControlHandler" prefHeight="120.0" prefWidth="80.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fx:id="sprinter" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/sprinter/down1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="spySelect" alignment="BOTTOM_CENTER" disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonControlHandler" prefHeight="120.0" prefWidth="80.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fx:id="spy" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/spy/down1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="80.0" />
+         </StackPane.margin></HBox>
+      <VBox alignment="TOP_CENTER" maxHeight="250.0" maxWidth="300.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0" StackPane.alignment="BOTTOM_CENTER">
+         <children>
+            <Button fx:id="letsGoButton" defaultButton="true" disable="true" maxHeight="55.0" mnemonicParsing="false" onAction="#buttonControlHandler" prefHeight="55.0" prefWidth="220.0" text="Let's Go!">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="30.0" />
+               </font></Button>
+            <Button fx:id="backButton" cancelButton="true" maxHeight="55.0" mnemonicParsing="false" onAction="#buttonControlHandler" prefHeight="50.0" prefWidth="200.0" text="Back">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="25.0" />
+               </font></Button>
+         </children></VBox>
+      <Label fx:id="readyPlayers" alignment="CENTER" prefHeight="60.0" prefWidth="618.0" text="[name here]" textFill="#39e5f8" visible="false" StackPane.alignment="CENTER">
+         <StackPane.margin>
+            <Insets top="160.0" />
+         </StackPane.margin>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</StackPane>

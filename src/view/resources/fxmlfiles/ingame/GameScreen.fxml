@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" focusTraversable="true" maxHeight="768.0" maxWidth="1024.0" onKeyPressed="#keyPressHandler" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.scenecontrol.ingameui.GameScreen">
+   <children>
+      <Group fx:id="gameZone" focusTraversable="true">
+         <children>
+            <Rectangle arcHeight="1.0" arcWidth="1.0" height="730.0" opacity="0.81" stroke="#ab1616" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
+         </children>
+      </Group>
+      <Group fx:id="pauseDialog" visible="false">
+         <children>
+            <Rectangle height="730.0" opacity="0.41" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
+            <Label fx:id="gamePausedLabel" layoutX="740.0" layoutY="670.0" text="Game Paused" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group fx:id="levelCompleteDialogue" layoutX="382.8330078125" layoutY="200.0" visible="false">
+         <children>
+            <Rectangle arcHeight="80.0" arcWidth="80.0" fill="#b5b016" height="116.0" layoutX="-75.0" layoutY="-30.0" opacity="0.81" stroke="#eeff00" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="4.0" width="418.0" />
+            <Label fx:id="levelCompleteLabel" layoutX="-56.0" layoutY="6.0" text="LEVEL 1 COMPLETE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group fx:id="gameOverDialog" layoutX="372.8330078125" layoutY="190.0" visible="false">
+         <children>
+            <Rectangle arcHeight="80.0" arcWidth="80.0" fill="#975b5b" height="340.0" layoutX="-16.0" layoutY="-30.0" opacity="0.81" stroke="#ab4c4c" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="4.0" width="310.0" />
+            <VBox alignment="CENTER" layoutX="0.1669921875">
+               <children>
+                  <Label fx:id="gameOverLabel" text="GAME OVER" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="34.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="150.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Would you like to restart?" textFill="#fffefe">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="40.0">
+                     <children>
+                        <Button fx:id="restartButton" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="30.0" prefWidth="70.0" text="Yes">
+                           <font>
+                              <Font name="DejaVu Serif Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="endToHSButton" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="30.0" prefWidth="70.0" text="No">
+                           <font>
+                              <Font name="DejaVu Serif Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Group>
+      <Group fx:id="escapeDialog" visible="false">
+         <children>
+            <Rectangle height="730.0" opacity="0.41" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
+            <Rectangle arcHeight="85.0" arcWidth="85.0" fill="#8a8989" height="120.0" layoutX="303.0" layoutY="295.0" opacity="0.85" stroke="#403e3e" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" width="410.0" />
+            <VBox alignment="CENTER" layoutX="335.0" layoutY="315.0" prefHeight="70.0" prefWidth="350.0" spacing="25.0">
+               <children>
+                  <Label text="Are you sure you want to exit?" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                     <children>
+                        <Button fx:id="yesButton" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="30.0" prefWidth="70.0" text="Yes">
+                           <font>
+                              <Font name="DejaVu Serif Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="noButton" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="30.0" prefWidth="70.0" text="No">
+                           <font>
+                              <Font name="DejaVu Serif Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Group>
+      <Group fx:id="startMessage" layoutX="262.0" layoutY="170.0">
+         <children>
+            <VBox alignment="CENTER" spacing="70.0">
+               <children>
+                  <StackPane opacity="0.79">
+                     <children>
+                        <Rectangle arcHeight="90.0" arcWidth="90.0" fill="#689ecd" height="90.0" stroke="#2e6690" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" width="300.0" />
+                        <Text fx:id="pressStartText" boundsType="VISUAL" strokeType="OUTSIDE" strokeWidth="0.0" text="PRESS ANY KEY TO START" textOrigin="TOP">
+                           <font>
+                              <Font name="DejaVu Serif Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </StackPane>
+                  <StackPane>
+                     <children>
+                        <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#9e9e9ea0" height="260.0" stroke="BLACK" strokeType="INSIDE" width="500.0" StackPane.alignment="CENTER" />
+                        <VBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Label text="Controls" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="DejaVu Serif Bold" size="32.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="TOP_CENTER" spacing="30.0">
+                                 <children>
+                                    <Label lineSpacing="1.0" text="-Player 1&#10;Arrow Keys = Movement&#10;Shift = Use Power Up&#10;&#10;P = Pause Game&#10;Esc = Exit Menu&#10;" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="DejaVu Serif Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label lineSpacing="1.0" text="-Player 2&#10;WASD = Movement&#10;&#10;&#10;-Player 3&#10;UHJK = Movement" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="DejaVu Serif Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </Group>
+      <Label fx:id="startTimerLabel" layoutX="496.0" layoutY="100.0" text="3" textFill="#e8e0e0" visible="false">
+         <font>
+            <Font name="DejaVu Serif Bold" size="44.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="15.0" layoutY="730.0">
+         <children>
+            <Label fx:id="levelLabel" prefHeight="38.0" prefWidth="223.0" text="LEVEL: 1" visible="true">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="scoreLabel" prefHeight="38.0" prefWidth="200.0" text="SCORE: 0" visible="true">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" text="Time Left: ">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="minsDisplay" text="02:">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="secondsDisplay" text="00">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <StackPane>
+               <children>
+                  <Label fx:id="swordPacLabel" alignment="CENTER" contentDisplay="CENTER" text="Sword Of Pac" textFill="#73b0fa" visible="false">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="20.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="65.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <Label fx:id="iceSpellLabel" alignment="CENTER" contentDisplay="CENTER" text="Ice Spell" textFill="#73b0fa" visible="false">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="20.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="65.0" />
+                     </StackPane.margin>
+                  </Label>
+                  <Label fx:id="swiftRunLabel" alignment="CENTER" contentDisplay="CENTER" text="Swift Run" textFill="#73b0fa" visible="false">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="20.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="65.0" />
+                     </StackPane.margin>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <HBox layoutX="870.0" layoutY="730.0" spacing="10.0">
+         <children>
+            <ImageView fx:id="lifeImage3" fitHeight="38.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/lifeImage.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="lifeImage2" fitHeight="38.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/lifeImage.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="lifeImage1" fitHeight="38.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" visible="true">
+               <image>
+                  <Image url="@../../images/lifeImage.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
